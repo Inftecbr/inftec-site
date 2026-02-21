@@ -1,18 +1,28 @@
 # INFTEC TECNOLOGIA  
-## Arquitetura digital para negócios que querem crescer com estrutura.
+## Arquitetura Digital para Negócios
+
+---
+
+# DOCUMENTO MASTER – DIRETRIZES TÉCNICAS E VISUAIS
+
+Este documento define TODAS as regras obrigatórias do site institucional da INFTEC.
+
+Nada deve ser implementado fora destas diretrizes.
 
 ---
 
 # 1. POSICIONAMENTO
 
-A INFTEC não é agência.  
-Não é curso.  
-Não é freelancer.  
-Não é produto milagroso.
-
 A INFTEC é:
 
-> Arquitetura digital para empresas que querem crescer com previsibilidade, organização e escala sustentável.
+Arquitetura digital para empresas que querem crescer com estrutura.
+
+Não é:
+- Agência de marketing
+- Curso online
+- Landing page agressiva
+- Produto milagroso
+- Freelancer tech
 
 O site deve transmitir:
 
@@ -20,32 +30,21 @@ O site deve transmitir:
 - Método
 - Autoridade
 - Energia controlada
-- Maturidade técnica
+- Organização
 - Crescimento sustentável
-
-Nunca deve parecer:
-
-- Infoproduto
-- Landing page agressiva
-- Agência vibrante
-- Promessa exagerada
-- Marketing vazio
 
 ---
 
-# 2. STACK TECNOLÓGICA
+# 2. STACK
 
 Frontend:
 - React
 - TypeScript
 - Vite
-- SPA (Single Page Application)
+- SPA
 
 Deploy:
 - Vercel
-
-Build:
-npm run build
 
 ---
 
@@ -62,12 +61,10 @@ public/
 src/
   assets/
     images/
-      logo/
-        inftec-logo.svg
-      hero/
-        dashboard-mockup.png
-      graphics/
-        efficiency-chart.svg
+      logo/inftec-logo.svg
+      hero/dashboard-mockup.png
+      graphics/efficiency-chart.svg
+    icons/
 
   components/
     Navbar.tsx
@@ -84,72 +81,87 @@ src/
     CTA.tsx
 
   styles/
-    globals.css
     variables.css
+    globals.css
     animations.css
 
   App.tsx
   main.tsx
 
 index.html
-package.json
 vite.config.ts
+package.json
 
 ---
 
 # 4. IDENTIDADE VISUAL
 
-Fundo principal: #0E1116  
-Fundo secundário: #151A22  
-Fundo alternativo: #1B1F27  
+Fundo Principal: #0E1116  
+Fundo Secundário: #151A22  
+Fundo Alternado: #1B1F27  
 
-Texto principal: #E6E8EB  
-Texto secundário: #8F9AA6  
+Texto Principal: #E6E8EB  
+Texto Secundário: #8F9AA6  
 
-Cor estratégica (destaque): #C05621  
+Cor Estratégica: #C05621  
 
 Regras:
 
-- A cor estratégica só pode ser usada em:
-  - Botões primários
-  - Hover states
-  - Elementos gráficos
+- Laranja usado apenas em:
+  - Botões
+  - Hover
+  - Ícones estratégicos
   - Linhas de destaque
-  - Pequenos detalhes
+  - Elementos gráficos
 
-- Nunca usar o laranja como fundo dominante.
-- O site deve manter predominância escura.
+- Nunca usar laranja como fundo dominante.
+- Predominância visual escura obrigatória.
 
 ---
 
-# 5. ESTRUTURA DA PÁGINA
+# 5. ESTRUTURA DA HOMEPAGE
 
-A homepage deve seguir esta ordem EXATA:
+Ordem obrigatória:
 
 1. Hero
-2. Tensão (Problema)
-3. Arquitetura (Método)
-4. Modelo de Maturidade (Impacto)
+2. Tensão
+3. Arquitetura
+4. Modelo de Maturidade
 5. Competência
-6. Chamada Estratégica Final
+6. CTA Final
 7. Footer
 
-Cada seção deve ter:
+Cada seção deve:
 
-- Espaçamento vertical mínimo de 120px no desktop
-- Alternância clara de fundo para evitar “seções misturadas”
-- Container com max-width 1200px
-- Texto com max-width 720px
+- Ter padding vertical de 120px (desktop)
+- Ter padding vertical de 80px (mobile)
+- Alternar fundo
+- Usar container centralizado
+- Nunca “escapar” visualmente para outra seção
 
 ---
 
-# 6. HERO
+# 6. CONTAINER GLOBAL (OBRIGATÓRIO)
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+Mobile:
+padding: 0 16px;
+
+Nenhum conteúdo pode encostar na borda da tela.
+
+---
+
+# 7. HERO
 
 Layout Desktop:
 - 50% texto
 - 50% visual
-- Altura mínima: 90vh
-- Alinhamento vertical central
+- Altura mínima 90vh
 
 Título:
 
@@ -168,172 +180,155 @@ Quero estruturar meu crescimento
 Secundário:
 Conhecer o método
 
-Visual:
-- Dashboard escuro
-- Linha de crescimento animada
-- Glow laranja extremamente sutil no fundo
+Regras Mobile:
 
-Mobile:
-- Layout 1 coluna
+- Layout coluna única
 - Texto centralizado
 - Botões largura 100%
 - Imagem abaixo do texto
-- Padding lateral 16px
+- Espaçamento mínimo 32px entre texto e imagem
+- Headline reduz 20%
 
 ---
 
-# 7. TENSÃO (PROBLEMA)
+# 8. MENU MOBILE (OBRIGATÓRIO FUNCIONAR)
 
-Fundo mais profundo (#0E1116).
+Deve funcionar abaixo de 1024px.
+
+Comportamento obrigatório:
+
+- Abrir ao clicar no ícone
+- Fechar ao clicar em link
+- Fechar ao clicar fora
+- Fechar ao rolar página
+
+Estilo:
+
+- position: absolute
+- top: 72px
+- right: 16px
+- width: calc(100% - 32px)
+- max-width: 320px
+- background: #151A22
+- border-radius: 16px
+- padding: 24px
+- box-shadow forte
+- flex-direction: column
+- gap: 20px
+
+Links:
+- font-size mínimo 16px
+- área clicável confortável
+
+---
+
+# 9. TENSÃO
 
 Título:
 
 Escalar sem estrutura é apostar no caos.
 
-Lista vertical:
+Lista com ícones obrigatórios.
 
-- Processos manuais limitam crescimento
-- Dados descentralizados impedem decisões
-- Falta de integração gera retrabalho
-- Crescimento sem previsibilidade corrói margem
+Cada item deve ter:
 
-Texto final:
+- Ícone SVG 20px
+- Cor #C05621
+- margin-right 12px
+- Texto alinhado verticalmente
 
-Antes de acelerar, é preciso organizar.
-
-Layout:
-- Coluna única
-- Texto centralizado com limite de largura
-- Espaço vertical generoso entre itens
-
-Mobile:
-- Manter coluna única
-- Reduzir padding vertical para 80px
+Proibido bullet simples sem ícone.
 
 ---
 
-# 8. ARQUITETURA (MÉTODO INFTEC)
-
-Fundo alternativo (#151A22).
-
-Título:
-
-Crescimento exige arquitetura.
+# 10. ARQUITETURA (MÉTODO)
 
 Grid Desktop:
-- 3 colunas
-- 2 linhas
-- Gap 24px
+3 colunas
+2 linhas
+gap 24px
 
-Cards:
+Mobile:
+1 coluna
 
-01 — Mapeamento operacional  
-02 — Integração estratégica  
-03 — Organização de dados  
-04 — Automação crítica  
-05 — Indicadores claros  
-06 — Base preparada para escala  
+Cards devem ter:
 
-Cada card deve ter:
 - Fundo #1B1F27
+- Padding 32px desktop
+- Padding 24px mobile
 - Border sutil
-- Padding 32px
 - Hover com leve elevação
-- Número grande com opacidade baixa no fundo
-
-Mobile:
-- 1 coluna
-- Cards largura total
-- Padding interno reduzido para 24px
+- Número grande no fundo com opacidade baixa
 
 ---
 
-# 9. MODELO DE MATURIDADE (IMPACTO)
+# 11. MODELO DE MATURIDADE (GRÁFICO)
 
-Fundo secundário (#151A22).
+Regras CRÍTICAS:
 
-Layout Desktop:
-- 60% gráfico
-- 40% texto
+O SVG NÃO pode ter:
 
-Título:
+- width fixo
+- height fixo
+- px fixo
 
-Crescimento sustentável segue padrão.
+Deve ter:
 
-Texto:
+- viewBox apenas
+- width: 100%
+- height: auto
 
-Empresas estruturadas evoluem por maturidade operacional, não por tentativa e erro.
+Container gráfico:
 
-Pilares:
-
-Arquitetura  
-Previsibilidade  
-Escala  
-
-O gráfico deve:
-- Ser SVG responsivo (sem width/height fixos)
-- Usar apenas viewBox
-- Nunca quebrar o layout
-- Nunca ultrapassar 420px de largura máxima
+Desktop:
+- max-width 480px
+- margin 0 auto
 
 Mobile:
-- Layout 1 coluna
-- Gráfico acima
-- Texto abaixo
-- Centralizar gráfico
+- width 100%
+- gráfico acima do texto
+- centralizado
+- nunca alinhado à esquerda
+- largura mínima visual 280px
+
+Layout mobile:
+
+- coluna única
+- gráfico primeiro
+- texto depois
+
+Proibido gráfico minúsculo.
 
 ---
 
-# 10. COMPETÊNCIA
-
-Fundo principal (#0E1116).
-
-Título:
-
-Arquitetura aplicada com responsabilidade.
+# 12. COMPETÊNCIA
 
 Grid Desktop:
-- 2 colunas
-- Gap 24px
-
-Itens:
-
-- Desenvolvimento sob medida
-- Arquitetura escalável
-- Integração entre plataformas
-- Automação orientada a performance
-
-Estilo:
-- Blocos minimalistas
-- Ícones discretos
-- Sem exagero visual
+2 colunas
 
 Mobile:
-- 1 coluna
-- Blocos largura total
+1 coluna
+
+Itens com ícones obrigatórios.
+
+Nunca lista simples sem reforço visual.
 
 ---
 
-# 11. CTA FINAL
+# 13. CTA FINAL
 
-Fundo preto profundo (#0E1116).
-
-Título grande:
-
-Se sua empresa quer crescer, ela precisa estar preparada para isso.
+Título grande centralizado.
 
 Botão:
 
 Estruturar minha operação
 
-Layout:
-- Centralizado
-- Botão com largura automática no desktop
-- Largura 100% no mobile
+Mobile:
+Botão largura 100%
 
 ---
 
-# 12. FOOTER
+# 14. FOOTER
 
 Deve conter:
 
@@ -343,48 +338,41 @@ São Paulo – SP
 © 2026  
 
 Estilo:
+
 - Texto secundário
 - Centralizado
-- Padding vertical 48px
 - Border-top sutil
+- Padding vertical 48px
 
 ---
 
-# 13. RESPONSIVIDADE (OBRIGATÓRIO)
+# 15. RESPONSIVIDADE (OBRIGATÓRIA)
 
 Breakpoints:
 
 1024px:
-- Grid 3 colunas vira 2
-- Navbar vira hamburguer
+- Menu vira hamburguer
+- Grid 3 → 2
 
 768px:
-- Todas grids viram 1 coluna
+- Todas grids → 1
 - Padding lateral 16px
-- Botões 100% largura
+- Botões largura 100%
 
 480px:
-- Headline reduz 20%
-- Espaçamento vertical reduz 15%
-- Cards padding reduz 20%
+- Headline -20%
+- Espaçamento vertical -15%
+
+Nenhum elemento pode:
+
+- Ficar menor que 280px visualmente
+- Grudar na lateral
+- Quebrar layout
+- Sobrepor texto
 
 ---
 
-# 14. MENU MOBILE
-
-Deve:
-
-- Usar estado (useState)
-- Adicionar classe .open
-- Fechar ao clicar em link
-- Fundo sólido escuro
-- Border-radius 12px
-- Sombra forte
-- Links empilhados verticalmente
-
----
-
-# 15. SEO BÁSICO
+# 16. SEO
 
 index.html deve conter:
 
@@ -398,25 +386,355 @@ User-agent: *
 Allow: /
 Sitemap: https://inftec.com.br/sitemap.xml
 
-sitemap.xml deve conter a URL da home.
+---
+
+# 17. CHECKLIST FINAL
+
+Antes de publicar:
+
+✔ Menu mobile abre e fecha corretamente  
+✔ Menu fecha ao clicar em link  
+✔ Gráfico ocupa largura total no mobile  
+✔ Ícones presentes nas listas  
+✔ Seções claramente separadas  
+✔ Texto nunca encosta nas bordas  
+✔ Botões confortáveis no mobile  
+✔ Nenhum elemento minúsculo  
 
 ---
 
-# 16. OBJETIVO FINAL
+# OBJETIVO FINAL
 
 O visitante deve sentir:
 
-- Energia controlada
 - Estrutura
-- Método
-- Confiança
 - Clareza
-- Direção estratégica
+- Organização
+- Energia controlada
+- Profissionalismo
 
 Nunca deve sentir:
 
-- Pressão
-- Exagero
+- Amadorismo
+- Layout quebrado
+- Marketing exagerado
 - Vibração infantil
-- Marketing vazio
-- Promessas irreais
+- Desorganização
+
+# INFTEC TECNOLOGIA TOPICO OPERACIONAL
+## DOCUMENTO MASTER – HOME ESTÁVEL V1
+
+============================================================
+1. OBJETIVO DESTE DOCUMENTO
+============================================================
+
+Este documento define a engenharia completa da HOME da INFTEC.
+
+Objetivo:
+- Estabilidade visual
+- Responsividade real
+- Hierarquia clara
+- Mobile funcional
+- Zero improviso
+
+Este documento NÃO trata de múltiplas páginas.
+Foco absoluto na HOME.
+
+============================================================
+2. SISTEMA DE LAYOUT BASE
+============================================================
+
+2.1 Container Global
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+Regra:
+Nenhum conteúdo pode encostar na borda.
+
+------------------------------------------------------------
+
+2.2 Sistema de Espaçamento
+
+Base de espaçamento: múltiplos de 8px.
+
+Seções:
+- Desktop: padding-top e bottom 120px
+- Mobile: padding-top e bottom 80px
+
+Componentes:
+- Gap padrão grid: 24px
+- Gap interno cards: 32px (desktop), 24px (mobile)
+- Espaço entre título e subtítulo: 16px
+- Espaço entre subtítulo e botão: 24px
+
+============================================================
+3. SISTEMA DE CORES
+============================================================
+
+Fundo Principal: #0E1116
+Fundo Secundário: #151A22
+Fundo Alternado: #1B1F27
+
+Texto Principal: #E6E8EB
+Texto Secundário: #8F9AA6
+
+Cor Estratégica: #C05621
+
+Regras:
+- Alternar fundo a cada seção.
+- Nunca repetir fundo em duas seções consecutivas.
+- Laranja apenas em botões, ícones e destaques.
+
+============================================================
+4. SISTEMA DE TIPOGRAFIA
+============================================================
+
+H1:
+- 48px desktop
+- 36px tablet
+- 28px mobile
+- font-weight: 700
+- line-height: 1.2
+
+H2:
+- 32px desktop
+- 26px tablet
+- 22px mobile
+
+Texto padrão:
+- 18px desktop
+- 16px mobile
+- line-height: 1.6
+
+Regra:
+Textos longos max-width: 720px.
+
+============================================================
+5. GRID RESPONSIVO
+============================================================
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+Regra:
+Nunca manter 2 colunas abaixo de 600px.
+
+============================================================
+6. NAVBAR E MENU MOBILE
+============================================================
+
+Navbar fixa:
+- height: 72px
+- position: fixed
+- width: 100%
+
+Menu Mobile:
+
+Condições:
+- Ativar abaixo de 1024px.
+- Esconder menu horizontal.
+- Mostrar botão hamburguer.
+
+Painel Mobile:
+
+.nav-mobile {
+  position: absolute;
+  top: 72px;
+  right: 16px;
+  width: calc(100% - 32px);
+  max-width: 320px;
+  background: #151A22;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+Comportamento obrigatório:
+- Abrir ao clicar.
+- Fechar ao clicar em link.
+- Fechar ao clicar fora.
+- Fechar ao scroll.
+
+============================================================
+7. HERO – ESPECIFICAÇÃO
+============================================================
+
+Layout Desktop:
+- Flex horizontal
+- Gap 60px
+- Altura mínima 90vh
+
+Layout Mobile:
+- Flex coluna
+- Texto centralizado
+- Botões 100% largura
+- Imagem abaixo
+- Espaço mínimo 32px entre texto e imagem
+
+Botão:
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+============================================================
+8. SEÇÃO TENSÃO
+============================================================
+
+Layout:
+- Coluna única
+- Texto centralizado
+- Lista com ícones
+
+Ícones:
+- SVG 20px
+- Cor #C05621
+- margin-right: 12px
+
+Estrutura:
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+Proibido bullet simples.
+
+============================================================
+9. SEÇÃO ARQUITETURA
+============================================================
+
+Usar .grid-3
+
+Cards:
+
+.card {
+  background: #1B1F27;
+  padding: 32px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
+
+============================================================
+10. SEÇÃO IMPACTO (GRÁFICO)
+============================================================
+
+SVG obrigatório:
+
+- Apenas viewBox
+- width: 100%
+- height: auto
+- max-width: 480px
+
+Container:
+
+.impact-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Mobile:
+
+- Layout coluna
+- Gráfico acima
+- Texto abaixo
+- Gráfico nunca menor que 280px visualmente
+- Nunca alinhado à esquerda
+
+============================================================
+11. SEÇÃO COMPETÊNCIA
+============================================================
+
+Grid 2 colunas desktop
+1 coluna mobile
+
+Itens com ícones obrigatórios.
+
+============================================================
+12. CTA FINAL
+============================================================
+
+Texto centralizado.
+Botão largura automática desktop.
+Botão largura total mobile.
+
+============================================================
+13. REGRAS ANTI-QUEBRA
+============================================================
+
+Proibido:
+- width fixa em px para layout estrutural.
+- height fixa para imagens principais.
+- overflow escondido sem controle.
+- grid 2 colunas abaixo de 600px.
+- texto sem limite de largura.
+
+Nenhum elemento pode:
+- Ficar menor que 280px.
+- Grudar na lateral.
+- Sobrepor outro.
+
+============================================================
+14. CHECKLIST FINAL
+============================================================
+
+✔ Menu mobile abre e fecha corretamente
+✔ Menu fecha ao clicar em link
+✔ Menu fecha ao rolar
+✔ Gráfico centralizado no mobile
+✔ Nenhum elemento minúsculo
+✔ Ícones aplicados nas listas
+✔ Seções claramente separadas
+✔ Layout testado em 375px
+✔ Botões confortáveis no mobile
+
+============================================================
+FIM DO DOCUMENTO MASTER – HOME V1
+============================================================

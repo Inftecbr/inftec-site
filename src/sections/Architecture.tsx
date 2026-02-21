@@ -12,7 +12,7 @@ export default function Architecture(){
   ]
 
   return (
-    <SectionWrapper id="architecture">
+    <SectionWrapper id="architecture" alt>
       <h3 className="section-title">Crescimento exige arquitetura.</h3>
       <p className="section-lead">Nosso método organiza as bases para um crescimento previsível e sustentável.</p>
 
