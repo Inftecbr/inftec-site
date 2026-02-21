@@ -6,9 +6,9 @@ export default function Navbar(){
   const [active, setActive] = useState<string>('')
 
   const items = [
-    { id: 'market', label: 'O Problema' },
-    { id: 'what-we-do', label: 'Abordagem' },
-    { id: 'impact', label: 'Impacto' },
+    { id: 'tension', label: 'Tensão' },
+    { id: 'architecture', label: 'Arquitetura' },
+    { id: 'impact', label: 'Modelo' },
     { id: 'competence', label: 'Competência' },
     { id: 'contact', label: 'Contato' }
   ]

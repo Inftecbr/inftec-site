@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Problem from './sections/Problem'
-import Solutions from './sections/Solutions'
+import Tension from './sections/Tension'
+import Architecture from './sections/Architecture'
 import Impact from './sections/Impact'
 import Competence from './sections/Competence'
 import Contact from './sections/Contact'
@@ -14,8 +14,8 @@ export default function App() {
       <Navbar />
       <Hero />
       <main>
-        <Problem />
-        <Solutions />
+        <Tension />
+        <Architecture />
         <Impact />
         <Competence />
         <Contact />

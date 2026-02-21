@@ -210,14 +210,14 @@ body {
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px; /* guideline */
 }
 
 .solution-card {
-  background: #151A22;
-  padding: 32px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.04);
+  background: var(--color-bg-alt); /* #1B1F27 per guideline */
+  padding: 32px; /* guideline */
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
   transition: transform .2s ease, border-color .2s ease;
 }
 
@@ -377,6 +377,14 @@ body {
   .solutions-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Mobile hero adjustments per guideline */
+  .hero { padding: 0 16px; }
+  .hero-inner { gap: 20px; }
+  .hero-right { order: 2 }
+  .hero-left { order: 1 }
+  .hero-actions { flex-direction: column; gap: 12px }
+  .hero-actions .btn { width: 100%; }
 }
 
 /* ================= ACCESSIBILITY ================= */

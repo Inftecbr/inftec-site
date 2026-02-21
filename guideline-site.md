@@ -1,21 +1,35 @@
-# INFTEC TECNOLOGIA
-## Tecnologia com estrutura. Crescimento com direção.
+# INFTEC TECNOLOGIA  
+## Arquitetura digital para negócios que querem crescer com estrutura.
 
 ---
 
-# 1. OBJETIVO DO PROJETO
+# 1. POSICIONAMENTO
 
-Criar um site institucional premium, sofisticado e profissional que transmita:
+A INFTEC não é agência.  
+Não é curso.  
+Não é freelancer.  
+Não é produto milagroso.
 
-- Competência técnica
+A INFTEC é:
+
+> Arquitetura digital para empresas que querem crescer com previsibilidade, organização e escala sustentável.
+
+O site deve transmitir:
+
 - Estrutura
-- Responsabilidade
-- Confiabilidade
+- Método
+- Autoridade
+- Energia controlada
+- Maturidade técnica
 - Crescimento sustentável
 
-O site deve demonstrar profundidade estratégica, não superficialidade comercial.
+Nunca deve parecer:
 
-Deve parecer uma empresa estruturada, não uma agência genérica.
+- Infoproduto
+- Landing page agressiva
+- Agência vibrante
+- Promessa exagerada
+- Marketing vazio
 
 ---
 
@@ -30,248 +44,379 @@ Frontend:
 Deploy:
 - Vercel
 
-Código organizado e preparado para futura expansão.
+Build:
+npm run build
 
 ---
 
 # 3. ESTRUTURA DE PASTAS
 
 inftec-site/
-│
-├── public/
-│   ├── favicon.ico
-│   ├── og-image.png
-│   └── robots.txt
-│
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   │   ├── logo/
-│   │   │   │   ├── inftec-logo.svg
-│   │   │   │   ├── inftec-logo-dark.svg
-│   │   │   │   └── inftec-logo-mark.svg
-│   │   │   │
-│   │   │   ├── hero/
-│   │   │   │   └── dashboard-mockup.png
-│   │   │   │
-│   │   │   ├── graphics/
-│   │   │   │   └── efficiency-chart.svg
-│   │   │   │
-│   │   │   └── backgrounds/
-│   │   │       └── subtle-grid.svg
-│   │   │
-│   │   └── icons/
-│   │
-│   ├── components/
-│   │   ├── Button.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   └── SectionWrapper.tsx
-│   │
-│   ├── sections/
-│   │   ├── Hero.tsx
-│   │   ├── Problem.tsx
-│   │   ├── Solutions.tsx
-│   │   ├── Impact.tsx
-│   │   ├── Competence.tsx
-│   │   └── Contact.tsx
-│   │
-│   ├── styles/
-│   │   ├── globals.css
-│   │   ├── variables.css
-│   │   └── animations.css
-│   │
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── index.html
-├── package.json
-└── vite.config.ts
 
----
+public/
+- favicon.ico
+- robots.txt
+- sitemap.xml
+- og-image.png
 
-# 3.1 ARQUITETURA DE SEÇÕES (OBRIGATÓRIO)
+src/
+  assets/
+    images/
+      logo/
+        inftec-logo.svg
+      hero/
+        dashboard-mockup.png
+      graphics/
+        efficiency-chart.svg
 
-Cada seção deve ser um arquivo isolado dentro de:
+  components/
+    Navbar.tsx
+    Footer.tsx
+    Button.tsx
+    SectionWrapper.tsx
 
-src/sections/
+  sections/
+    Hero.tsx
+    Tension.tsx
+    Architecture.tsx
+    Impact.tsx
+    Competence.tsx
+    CTA.tsx
 
-Cada seção deve conter:
+  styles/
+    globals.css
+    variables.css
+    animations.css
 
-- Um <section>
-- Fundo explícito
-- Padding vertical mínimo de 120px
-- Container interno com max-width 1200px
-- Margin: 0 auto
-- Padding lateral mínimo de 24px
+  App.tsx
+  main.tsx
 
-Nenhuma seção pode compartilhar background com a anterior.
-
----
-
-# REGRA DE FUNDO POR SEÇÃO
-
-Hero → var(--color-bg-primary)  
-Problem → var(--color-bg-secondary)  
-Solutions → var(--color-bg-primary)  
-Impact → var(--color-bg-secondary)  
-Competence → var(--color-bg-primary)  
-Contact → var(--color-bg-secondary)  
-
-Alternância obrigatória.
+index.html
+package.json
+vite.config.ts
 
 ---
 
 # 4. IDENTIDADE VISUAL
 
-## Fundo Principal
-#0E1116
+Fundo principal: #0E1116  
+Fundo secundário: #151A22  
+Fundo alternativo: #1B1F27  
 
-## Fundo Secundário
-#1B1F27
+Texto principal: #E6E8EB  
+Texto secundário: #8F9AA6  
 
-## Texto Principal
-#E6E8EB
+Cor estratégica (destaque): #C05621  
 
-## Texto Secundário
-#8F9AA6
+Regras:
 
-## Destaque Estratégico
-#C05621
+- A cor estratégica só pode ser usada em:
+  - Botões primários
+  - Hover states
+  - Elementos gráficos
+  - Linhas de destaque
+  - Pequenos detalhes
 
-Uso da cor de destaque apenas em:
-
-- Botões
-- Hover
-- Elementos estratégicos
-- Linha do gráfico
-
-Nunca exagerar.
+- Nunca usar o laranja como fundo dominante.
+- O site deve manter predominância escura.
 
 ---
 
-# 5. VARIÁVEIS CSS
+# 5. ESTRUTURA DA PÁGINA
 
-Arquivo: styles/variables.css
+A homepage deve seguir esta ordem EXATA:
 
-:root {
-  --color-bg-primary: #0E1116;
-  --color-bg-secondary: #1B1F27;
-  --color-text-primary: #E6E8EB;
-  --color-text-secondary: #8F9AA6;
-  --color-accent: #C05621;
-}
+1. Hero
+2. Tensão (Problema)
+3. Arquitetura (Método)
+4. Modelo de Maturidade (Impacto)
+5. Competência
+6. Chamada Estratégica Final
+7. Footer
 
----
+Cada seção deve ter:
 
-# 6. ESTRUTURA DA PÁGINA
-
----
-
-## HERO SECTION
-
-Layout 50/50
-
-Texto:
-
-INFTEC  
-TECNOLOGIA  
-
-Estruturamos tecnologia para empresas que querem crescer com previsibilidade.
-
-Transformamos operações manuais e desorganizadas em sistemas digitais eficientes, automatizados e mensuráveis.
-
-[ Fale conosco ]  
-[ Conheça nossa abordagem ]
-
-Imagem:
-
-Mockup escuro sofisticado de dashboard.
-Nada genérico.
-Nada banco de imagem clichê.
+- Espaçamento vertical mínimo de 120px no desktop
+- Alternância clara de fundo para evitar “seções misturadas”
+- Container com max-width 1200px
+- Texto com max-width 720px
 
 ---
 
-## SEÇÃO 2 – O PROBLEMA
+# 6. HERO
+
+Layout Desktop:
+- 50% texto
+- 50% visual
+- Altura mínima: 90vh
+- Alinhamento vertical central
 
 Título:
-Crescer sem estrutura é crescer no escuro.
 
-- Processos desorganizados
-- Falta de controle de dados
-- Baixa previsibilidade
-- Retrabalho
-- Decisões baseadas em tentativa e erro
-
----
-
-## SEÇÃO 3 – A ABORDAGEM
-
-Título:
-Estrutura antes de escala.
-
-Organizamos:
-
-- Fluxos operacionais
-- Integrações
-- Dados
-- Automação
-- Indicadores de performance
-
----
-
-## SEÇÃO 4 – IMPACTO ESTRUTURAL
-
-Layout obrigatório:
-Grid 2 colunas equilibradas.
-
-Título:
-Crescimento precisa ser estruturado antes de ser acelerado.
+Negócios crescem.  
+Estruturas sustentam.
 
 Subtítulo:
-Não prometemos números mágicos. Estrutura gera evolução consistente.
 
-Coluna esquerda:
+A INFTEC projeta arquiteturas digitais para empresas que querem crescer com previsibilidade e eficiência.
 
-- Redução de retrabalho
-- Processos padronizados
-- Dados centralizados
-- Clareza de indicadores
-- Base pronta para escalar
+Botões:
+
+Primário:
+Quero estruturar meu crescimento
+
+Secundário:
+Conhecer o método
+
+Visual:
+- Dashboard escuro
+- Linha de crescimento animada
+- Glow laranja extremamente sutil no fundo
+
+Mobile:
+- Layout 1 coluna
+- Texto centralizado
+- Botões largura 100%
+- Imagem abaixo do texto
+- Padding lateral 16px
+
+---
+
+# 7. TENSÃO (PROBLEMA)
+
+Fundo mais profundo (#0E1116).
+
+Título:
+
+Escalar sem estrutura é apostar no caos.
+
+Lista vertical:
+
+- Processos manuais limitam crescimento
+- Dados descentralizados impedem decisões
+- Falta de integração gera retrabalho
+- Crescimento sem previsibilidade corrói margem
 
 Texto final:
 
-Organização gera previsibilidade.  
-Previsibilidade sustenta crescimento.
+Antes de acelerar, é preciso organizar.
 
-Coluna direita:
+Layout:
+- Coluna única
+- Texto centralizado com limite de largura
+- Espaço vertical generoso entre itens
 
-Arquivo:
-src/assets/images/graphics/efficiency-chart.svg
+Mobile:
+- Manter coluna única
+- Reduzir padding vertical para 80px
 
-### SVG BASE
+---
 
-```svg
-<svg width="480" height="300" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="480" height="300" rx="16" fill="#151A22"/>
-  <line x1="60" y1="40" x2="60" y2="240" stroke="#2A3038"/>
-  <line x1="60" y1="240" x2="440" y2="240" stroke="#2A3038"/>
+# 8. ARQUITETURA (MÉTODO INFTEC)
 
-  <polyline 
-    fill="none"
-    stroke="#C05621"
-    stroke-width="3"
-    points="60,220 130,200 200,170 270,150 340,135 410,120"
-  />
+Fundo alternativo (#151A22).
 
-  <circle cx="60" cy="220" r="4" fill="#C05621"/>
-  <circle cx="130" cy="200" r="4" fill="#C05621"/>
-  <circle cx="200" cy="170" r="4" fill="#C05621"/>
-  <circle cx="270" cy="150" r="4" fill="#C05621"/>
-  <circle cx="340" cy="135" r="4" fill="#C05621"/>
-  <circle cx="410" cy="120" r="4" fill="#C05621"/>
+Título:
 
-  <text x="60" y="25" fill="#E6E8EB" font-size="14" font-weight="600">
-    Evolução da Maturidade Operacional
-  </text>
-</svg>
+Crescimento exige arquitetura.
+
+Grid Desktop:
+- 3 colunas
+- 2 linhas
+- Gap 24px
+
+Cards:
+
+01 — Mapeamento operacional  
+02 — Integração estratégica  
+03 — Organização de dados  
+04 — Automação crítica  
+05 — Indicadores claros  
+06 — Base preparada para escala  
+
+Cada card deve ter:
+- Fundo #1B1F27
+- Border sutil
+- Padding 32px
+- Hover com leve elevação
+- Número grande com opacidade baixa no fundo
+
+Mobile:
+- 1 coluna
+- Cards largura total
+- Padding interno reduzido para 24px
+
+---
+
+# 9. MODELO DE MATURIDADE (IMPACTO)
+
+Fundo secundário (#151A22).
+
+Layout Desktop:
+- 60% gráfico
+- 40% texto
+
+Título:
+
+Crescimento sustentável segue padrão.
+
+Texto:
+
+Empresas estruturadas evoluem por maturidade operacional, não por tentativa e erro.
+
+Pilares:
+
+Arquitetura  
+Previsibilidade  
+Escala  
+
+O gráfico deve:
+- Ser SVG responsivo (sem width/height fixos)
+- Usar apenas viewBox
+- Nunca quebrar o layout
+- Nunca ultrapassar 420px de largura máxima
+
+Mobile:
+- Layout 1 coluna
+- Gráfico acima
+- Texto abaixo
+- Centralizar gráfico
+
+---
+
+# 10. COMPETÊNCIA
+
+Fundo principal (#0E1116).
+
+Título:
+
+Arquitetura aplicada com responsabilidade.
+
+Grid Desktop:
+- 2 colunas
+- Gap 24px
+
+Itens:
+
+- Desenvolvimento sob medida
+- Arquitetura escalável
+- Integração entre plataformas
+- Automação orientada a performance
+
+Estilo:
+- Blocos minimalistas
+- Ícones discretos
+- Sem exagero visual
+
+Mobile:
+- 1 coluna
+- Blocos largura total
+
+---
+
+# 11. CTA FINAL
+
+Fundo preto profundo (#0E1116).
+
+Título grande:
+
+Se sua empresa quer crescer, ela precisa estar preparada para isso.
+
+Botão:
+
+Estruturar minha operação
+
+Layout:
+- Centralizado
+- Botão com largura automática no desktop
+- Largura 100% no mobile
+
+---
+
+# 12. FOOTER
+
+Deve conter:
+
+INFTEC TECNOLOGIA LTDA  
+CNPJ: 47.281.110/0001-32  
+São Paulo – SP  
+© 2026  
+
+Estilo:
+- Texto secundário
+- Centralizado
+- Padding vertical 48px
+- Border-top sutil
+
+---
+
+# 13. RESPONSIVIDADE (OBRIGATÓRIO)
+
+Breakpoints:
+
+1024px:
+- Grid 3 colunas vira 2
+- Navbar vira hamburguer
+
+768px:
+- Todas grids viram 1 coluna
+- Padding lateral 16px
+- Botões 100% largura
+
+480px:
+- Headline reduz 20%
+- Espaçamento vertical reduz 15%
+- Cards padding reduz 20%
+
+---
+
+# 14. MENU MOBILE
+
+Deve:
+
+- Usar estado (useState)
+- Adicionar classe .open
+- Fechar ao clicar em link
+- Fundo sólido escuro
+- Border-radius 12px
+- Sombra forte
+- Links empilhados verticalmente
+
+---
+
+# 15. SEO BÁSICO
+
+index.html deve conter:
+
+<meta name="description" content="Arquitetura digital para empresas que querem crescer com estrutura e previsibilidade.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="luQsmK5G-kMhaM8svwkPd1ePwu68hp1B6Mtrk1Kw7PA">
+
+robots.txt:
+
+User-agent: *
+Allow: /
+Sitemap: https://inftec.com.br/sitemap.xml
+
+sitemap.xml deve conter a URL da home.
+
+---
+
+# 16. OBJETIVO FINAL
+
+O visitante deve sentir:
+
+- Energia controlada
+- Estrutura
+- Método
+- Confiança
+- Clareza
+- Direção estratégica
+
+Nunca deve sentir:
+
+- Pressão
+- Exagero
+- Vibração infantil
+- Marketing vazio
+- Promessas irreais
