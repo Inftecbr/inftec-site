@@ -402,11 +402,6 @@ body {
   .site-footer .footer-left { text-align: left; }
   .site-footer .footer-right { text-align: right; }
 }
-@media (max-width: 768px) {
-  .site-footer .footer-inner { flex-direction: column; text-align: center; }
-  .site-footer .footer-left, .site-footer .footer-right { text-align: center; }
-}
-}
 
 /* Icon list items */
 .icon-item{display:flex;align-items:center;gap:12px}
