@@ -7,10 +7,10 @@ export default function Navbar(){
   const navRef = useRef<HTMLElement | null>(null)
 
   const items = [
-    { id: 'tension', label: 'Tensão' },
-    { id: 'architecture', label: 'Arquitetura' },
-    { id: 'impact', label: 'Modelo' },
-    { id: 'competence', label: 'Competência' },
+    { id: 'tension', label: 'O problema' },
+    { id: 'architecture', label: 'Meu método' },
+    { id: 'impact', label: 'Maturidade' },
+    { id: 'competence', label: 'Sobre' },
     { id: 'contact', label: 'Contato' }
   ]
 
