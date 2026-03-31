@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
 
           <h1 className="brand-main">
-            Eu ajudo empresas a estruturar os sistemas que sustentam a sua operação digital.
+            A Inftec ajuda empresas a estruturar os sistemas que sustentam a sua operação digital.
           </h1>
 
           <p className="support">
