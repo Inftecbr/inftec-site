@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import logoSvg from '../assets/images/logo/inftec-logo.svg'
 
 export default function Navbar(){
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState<string>('')
+  const navRef = useRef<HTMLElement | null>(null)
 
   const items = [
-    { id: 'market', label: 'O Problema' },
-    { id: 'what-we-do', label: 'Abordagem' },
-    { id: 'impact', label: 'Impacto' },
-    { id: 'competence', label: 'Competência' },
+    { id: 'tension', label: 'O problema' },
+    { id: 'architecture', label: 'Meu método' },
+    { id: 'impact', label: 'Maturidade' },
+    { id: 'competence', label: 'Sobre' },
     { id: 'contact', label: 'Contato' }
   ]
 
@@ -31,6 +32,24 @@ export default function Navbar(){
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // close menu on scroll
+  useEffect(() => {
+    const onScrollClose = () => { if (open) setOpen(false) }
+    window.addEventListener('scroll', onScrollClose, { passive: true })
+    return () => window.removeEventListener('scroll', onScrollClose)
+  }, [open])
+
+  // close menu on click outside
+  useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (!open) return
+      const node = navRef.current
+      if (node && !node.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDown)
+    return () => document.removeEventListener('mousedown', onDown)
+  }, [open])
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
     const el = document.getElementById(id)
@@ -42,7 +61,7 @@ export default function Navbar(){
   }
 
   return (
-    <nav className="nav">
+    <nav className="nav" ref={navRef}>
       <div className="nav-inner">
         <div className="nav-brand">
           <a href="#" className="brand-inline" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>

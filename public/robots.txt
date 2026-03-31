@@ -1,3 +1,3 @@
 User-agent: *
-Disallow:
-Sitemap: /sitemap.xml
+Allow: /
+Sitemap: https://inftec.com.br/sitemap.xml
