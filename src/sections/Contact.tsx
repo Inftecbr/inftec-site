@@ -11,7 +11,7 @@ export default function Contact(){
         <p className="section-lead">Se sua empresa busca crescer com organização, previsibilidade e controle, a tecnologia precisa trabalhar a seu favor.</p>
         <div className="cta-actions">
           <a className="btn primary large" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp</a>
-          <p className="muted" style={{marginTop:12}}>Telefone: (21) 99923-2887</p>
+          <p className="muted" style={{marginTop:12}}>E-Mail: contato@inftec.com.br</p>
         </div>
       </div>
     </SectionWrapper>

@@ -6,24 +6,24 @@ export default function Architecture(){
     'Mapeamento operacional',
     'Integração estratégica',
     'Organização de dados',
-    'Automação crítica',
-    'Indicadores claros',
-    'Base preparada para escala'
+    'Automação sob medida',
+    'Indicadores orientados à operação',
+    'Acompanhamento da estrutura'
   ]
 
   const descriptions = [
-    'Mapeamos os fluxos operacionais de ponta a ponta, identificando gargalos, dependências e riscos que travam o crescimento.',
-    'Conectamos sistemas e ferramentas de forma estratégica para que a informação circule com consistência e sem retrabalho.',
-    'Estruturamos como os dados são coletados, organizados e acessados para dar base às decisões operacionais e gerenciais.',
-    'Automatizamos etapas repetitivas e críticas, reduzindo erro humano e liberando tempo da equipe para atividades de maior valor.',
-    'Definimos indicadores práticos, conectados ao dia a dia da operação, que mostram se a estrutura está sustentando o crescimento.',
-    'Deixamos processos, sistemas e dados preparados para suportar mais volume sem perda de controle, previsibilidade ou qualidade.'
+    'Entendo como o trabalho acontece hoje: fluxos reais, pontos de atrito, onde a equipe gasta energia e onde os dados se perdem.',
+    'Desenho como sistemas, pessoas e informações precisam se conectar para a operação fluir sem retrabalho.',
+    'Defino como os dados serão capturados, organizados e disponibilizados para decisões do dia a dia e da gestão.',
+    'Projeto e implemento automações focadas nos pontos de maior impacto: menos trabalho manual, mais consistência.',
+    'Traduzo a arquitetura em métricas que fazem sentido para a operação — não só para dashboards bonitos.',
+    'Acompanho a implementação, ajusto o que for necessário e deixo a operação preparada para os próximos ciclos de crescimento.'
   ]
 
   return (
     <SectionWrapper id="architecture" alt>
-      <h3 className="section-title">Crescimento exige arquitetura.</h3>
-      <p className="section-lead">Nosso método organiza as bases para um crescimento previsível e sustentável.</p>
+      <h3 className="section-title">Como funciona um projeto comigo.</h3>
+      <p className="section-lead">Combino visão de arquitetura digital com entrega prática: diagnóstico, desenho da estrutura e implementação de soluções sob medida.</p>
 
       <div className="grid three" style={{marginTop:24}}>
         {cards.map((c, idx) => (
