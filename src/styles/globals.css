@@ -168,6 +168,17 @@ body {
   background: #A3471A;
 }
 
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--color-text-primary);
+}
+
+.btn.secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(192,86,33,0.45);
+}
+
 .btn.ghost {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.06);
@@ -299,6 +310,19 @@ body {
 .impact-item p {
   margin: 0;
   color: var(--color-text-secondary);
+}
+
+/* ================= CTA ================= */
+.cta-actions{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 768px) {
+  .cta-actions{flex-direction:column;gap:12px}
+  .cta-actions .btn{width:100%}
 }
 
 /* ===== NOVOS CARDS DE IMPACTO ===== */
