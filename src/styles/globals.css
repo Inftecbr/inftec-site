@@ -407,6 +407,9 @@ body {
 .icon-item{display:flex;align-items:center;gap:12px}
 .icon-item svg{flex:0 0 20px;height:20px;width:20px}
 
+.email-link{color:var(--color-text-primary);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.12);transition:color .15s ease,border-color .15s ease}
+.email-link:hover{color:var(--color-accent);border-color:rgba(192,86,33,0.55)}
+
 /* two column grid for competence */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 @media (max-width:768px){.grid-2{grid-template-columns:1fr}}
