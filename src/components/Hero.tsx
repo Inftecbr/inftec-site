@@ -25,10 +25,7 @@ export default function Hero() {
             sempre escolhendo o que faz mais sentido para o seu negócio, não para a moda tecnológica.
           </p>
 
-          <div className="hero-actions">
-            <a className="btn primary" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Conversar sobre a sua operação</a>
-            <a className="btn ghost" href="#architecture">Entender como eu trabalho</a>
-          </div>
+         
         </div>
 
         <div className="hero-right" aria-hidden>
