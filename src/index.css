@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    --portal-main-py: 2rem;
+    --portal-main-px: 2rem;
+    --portal-section-gap: 1.5rem;
+    --portal-grid-th-py: 0.75rem;
+    --portal-grid-td-py: 0.75rem;
+    --portal-grid-cell-px: 1rem;
+    --portal-card-title-py: 0.75rem;
+    --portal-card-title-px: 1.25rem;
+    --portal-card-body-p: 0.5rem;
+    --portal-field-mt: 0.375rem;
+    --portal-input-py: 0.5rem;
+    --portal-input-px: 0.75rem;
+    --portal-page-header-mb: 2rem;
+    --portal-nav-link-py: 0.625rem;
+    --portal-nav-link-px: 0.75rem;
+    --portal-sidebar-pad: 0.5rem;
+    --portal-sidebar-header-py: 0.75rem;
+  }
+
+  html[data-portal-density='compact'] {
+    --portal-main-py: 1rem;
+    --portal-main-px: 1rem;
+    --portal-section-gap: 1rem;
+    --portal-grid-th-py: 0.375rem;
+    --portal-grid-td-py: 0.375rem;
+    --portal-grid-cell-px: 0.625rem;
+    --portal-card-title-py: 0.5rem;
+    --portal-card-title-px: 0.875rem;
+    --portal-card-body-p: 0.25rem;
+    --portal-field-mt: 0.25rem;
+    --portal-input-py: 0.375rem;
+    --portal-input-px: 0.625rem;
+    --portal-page-header-mb: 1.25rem;
+    --portal-nav-link-py: 0.375rem;
+    --portal-nav-link-px: 0.5rem;
+    --portal-sidebar-pad: 0.25rem;
+    --portal-sidebar-header-py: 0.5rem;
+  }
+
+  html[data-portal-density='expanded'] {
+    --portal-main-py: 2.5rem;
+    --portal-main-px: 2.5rem;
+    --portal-section-gap: 2rem;
+    --portal-grid-th-py: 1rem;
+    --portal-grid-td-py: 1rem;
+    --portal-grid-cell-px: 1.25rem;
+    --portal-card-title-py: 1rem;
+    --portal-card-title-px: 1.5rem;
+    --portal-card-body-p: 0.75rem;
+    --portal-field-mt: 0.5rem;
+    --portal-input-py: 0.625rem;
+    --portal-input-px: 0.875rem;
+    --portal-page-header-mb: 2.5rem;
+    --portal-nav-link-py: 0.75rem;
+    --portal-nav-link-px: 1rem;
+    --portal-sidebar-pad: 0.75rem;
+    --portal-sidebar-header-py: 1rem;
+  }
+
+  body {
+    @apply bg-bg-deep text-text-primary antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .portal-main-shell {
+    padding: var(--portal-main-py) var(--portal-main-px);
+  }
+
+  .portal-section-stack {
+    gap: var(--portal-section-gap);
+  }
+
+  .portal-page-header-wrap {
+    margin-bottom: var(--portal-page-header-mb);
+  }
+
+  .portal-grid-th {
+    padding: var(--portal-grid-th-py) var(--portal-grid-cell-px);
+  }
+
+  .portal-grid-td {
+    padding: var(--portal-grid-td-py) var(--portal-grid-cell-px);
+  }
+
+  .portal-card-header {
+    padding: var(--portal-card-title-py) var(--portal-card-title-px);
+  }
+
+  .portal-card-body {
+    padding: var(--portal-card-body-p);
+  }
+
+  .portal-field-mt {
+    margin-top: var(--portal-field-mt);
+  }
+
+  .portal-input-density {
+    padding: var(--portal-input-py) var(--portal-input-px);
+  }
+
+  .portal-sidebar-pad {
+    padding: var(--portal-sidebar-pad);
+  }
+
+  .portal-sidebar-header {
+    padding: var(--portal-sidebar-header-py) 0.75rem;
+  }
+
+  .portal-nav-link {
+    padding: var(--portal-nav-link-py) var(--portal-nav-link-px);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .prose-inftec {
+    @apply text-sm md:text-base text-text-secondary leading-relaxed;
+  }
+
+  .prose-inftec h2 {
+    @apply text-text-primary;
+  }
+
+  .prose-inftec strong {
+    @apply text-text-primary font-medium;
+  }
+
+  .prose-inftec a {
+    @apply text-data hover:underline;
+  }
+}
