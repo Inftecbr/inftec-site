@@ -1,26 +1,16 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Tension from './sections/Tension'
-import Architecture from './sections/Architecture'
-import Impact from './sections/Impact'
-import Competence from './sections/Competence'
-import Contact from './sections/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter } from 'react-router-dom'
+import { AuthProvider } from './components/auth/AuthProvider'
+import { AccessHubProvider } from './features/access-hub/AccessHubContext'
+import AppRoutes from './routes/AppRoutes'
 
 export default function App() {
   return (
-    <div className="app-root">
-      <Navbar />
-      <Hero />
-      <main>
-        <Tension />
-        <Architecture />
-        <Impact />
-        <Competence />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <AccessHubProvider>
+          <AppRoutes />
+        </AccessHubProvider>
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
