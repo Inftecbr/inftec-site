@@ -4,6 +4,8 @@ import { DOMAINS } from '../../config/domains'
 
 const legalLinks = [
   { to: '/privacidade', label: 'Privacidade' },
+  { to: '/privacidade/exclusao-de-dados', label: 'Exclusão de dados' },
+  { to: '/privacidade/resumo', label: 'Privacidade (resumo)' },
   { to: '/termos', label: 'Termos de uso' },
   { to: '/cookies', label: 'Cookies' },
 ]
