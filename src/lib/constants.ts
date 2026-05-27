@@ -29,19 +29,19 @@ export const COMPANY = {
   positioning:
     'Empresa de tecnologia que constrói e opera plataformas operacionais — software onde sinais viram prioridade acionável.',
   shortDescription:
-    'Hub institucional da INFTEC: plataformas SaaS, governança e acesso às superfícies do ecossistema.',
+    'Site institucional da INFTEC: empresa de tecnologia, ecossistema SaaS e governança do ecossistema.',
 } as const
 
 export const PRODUCT = {
   name: 'Salefast',
-  tagline: 'Plataforma de inteligência comercial orientada a comportamento.',
+  tagline: 'Plataforma de inteligência operacional comercial.',
   siteUrl: DOMAINS.SALEFAST_SITE_URL,
   appUrl: DOMAINS.SALEFAST_APP_URL,
 } as const
 
 export const PORTAL_LABELS = {
   inftecPortal: 'Portal INFTEC',
-  salefastApp: 'Salefast Operation',
+  salefastApp: 'Salefast App',
   salefastSite: 'Site Salefast',
   apiPlatform: 'API Platform',
 } as const

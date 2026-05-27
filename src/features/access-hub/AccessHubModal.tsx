@@ -94,10 +94,10 @@ export default function AccessHubModal() {
             <div className="flex items-start justify-between gap-4 mb-6">
               <div>
                 <h2 id="access-hub-title" className="text-lg font-semibold">
-                  Acesso à plataforma
+                  Entrar
                 </h2>
                 <p className="mt-1 text-sm text-text-secondary">
-                  Universos distintos — escolha o ambiente correto. Logins não são compartilhados entre superfícies.
+                  Escolha a superfície correta. Portal INFTEC, app Salefast e documentação têm logins e propósitos distintos.
                 </p>
               </div>
               <button type="button" className="text-text-muted hover:text-text-primary p-1" onClick={close} aria-label="Fechar modal">

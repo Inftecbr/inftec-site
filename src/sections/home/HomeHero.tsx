@@ -1,26 +1,24 @@
 import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Button from '../../components/ui/Button'
-import { useAccessHub } from '../../features/access-hub/AccessHubContext'
-import { COMPANY, PORTAL_LABELS, PRODUCT } from '../../lib/constants'
+import { COMPANY, PRODUCT } from '../../lib/constants'
 
 const pillars = [
   {
     title: 'Plataformas SaaS',
-    body: 'Produtos proprietários de inteligência operacional — começando pelo comercial.',
+    body: 'Produtos proprietários com arquitetura multi-tenant e operação contínua.',
   },
   {
-    title: 'Engenharia',
-    body: '.NET, eventos, observabilidade e IA aplicada com governança.',
+    title: 'Governança e segurança',
+    body: 'Controle de acesso, conformidade e engenharia orientada a confiança.',
   },
   {
-    title: 'Portais separados',
-    body: 'Site institucional, portal administrativo INFTEC e ambientes do produto em domínios distintos.',
+    title: 'Ecossistema organizado',
+    body: 'Superfícies independentes — institucional, produto, portal e developers.',
   },
 ]
 
 export default function HomeHero() {
-  const { open: openAccessHub } = useAccessHub()
   return (
     <section className="relative overflow-hidden bg-bg-deep pb-16 pt-12 md:pt-20 md:pb-24">
       <div
@@ -38,25 +36,21 @@ export default function HomeHero() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-xs font-medium tracking-wide text-text-secondary uppercase mb-4">
-              {COMPANY.brand} · Empresa de tecnologia
+              {COMPANY.brand} · Software vendor
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-tight tracking-tight text-balance">
-              Construímos plataformas para transformar operação em inteligência.
+              Tecnologia enterprise para plataformas SaaS e ecossistemas digitais.
             </h1>
             <p className="mt-5 text-base sm:text-lg text-text-secondary leading-relaxed max-w-xl">
-              A {COMPANY.brand} desenvolve produtos SaaS que organizam sinais, contexto e prioridade em operações
-              comerciais e digitais. O Salefast é nossa primeira plataforma: inteligência comercial orientada a
-              comportamento.
+              A {COMPANY.brand} constrói e opera plataformas com foco em governança, segurança e maturidade
+              operacional. O Salefast é nosso produto flagship — site e aplicação em domínios próprios.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <Button variant="primary" href="/empresa">
                 Conhecer a INFTEC
               </Button>
               <Button variant="secondary" href={PRODUCT.siteUrl} external>
-                Conhecer Salefast
-              </Button>
-              <Button variant="ghost" onClick={openAccessHub}>
-                {PORTAL_LABELS.inftecPortal}
+                Conhecer Salefast ↗
               </Button>
             </div>
           </motion.div>

@@ -3,7 +3,7 @@ export const DOMAINS = {
   INFTEC_SITE_URL: 'https://inftec.com.br',
   /** Portal autenticado INFTEC (mesmo origin, rota SPA) */
   INFTEC_PORTAL_PATH: '/app',
-  SALEFAST_SITE_URL: 'https://salefast.com.br',
+  SALEFAST_SITE_URL: 'https://www.salefast.com.br',
   SALEFAST_APP_URL: 'https://app.salefast.com.br',
   STATUS_PLATFORM_URL: 'https://status.inftec.com.br',
   DOCS_PLATFORM_URL: 'https://docs.inftec.com.br',

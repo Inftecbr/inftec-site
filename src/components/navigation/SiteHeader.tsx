@@ -6,13 +6,12 @@ import Button from '../ui/Button'
 import NavDropdown from './NavDropdown'
 import NavIcon from './NavIcon'
 import { PUBLIC_NAV, HEADER_MAIN_LINKS } from '../../config/navigation'
-import { DOMAINS } from '../../config/domains'
 
 import { useAccessHub } from '../../features/access-hub/AccessHubContext'
 
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [openMenu, setOpenMenu] = useState<'products' | 'platform' | null>(null)
+  const [openMenu, setOpenMenu] = useState<'products' | null>(null)
   const location = useLocation()
   const headerRef = useRef<HTMLElement>(null)
   const { open: openAccessHub } = useAccessHub()
@@ -34,9 +33,7 @@ export default function SiteHeader() {
     return () => document.removeEventListener('mousedown', onDown)
   }, [mobileOpen, openMenu])
 
-  const toggle = (key: 'products' | 'platform') => setOpenMenu((m) => (m === key ? null : key))
-  const platformActive =
-    location.pathname.startsWith('/plataforma') || location.pathname.startsWith(DOMAINS.INFTEC_PORTAL_PATH)
+  const toggleProducts = () => setOpenMenu((m) => (m === 'products' ? null : 'products'))
 
   return (
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 h-[72px] border-b border-border bg-bg-deep/90 backdrop-blur-md">
@@ -50,16 +47,8 @@ export default function SiteHeader() {
             label={PUBLIC_NAV.products.label}
             items={PUBLIC_NAV.products.items}
             isOpen={openMenu === 'products'}
-            onToggle={() => toggle('products')}
+            onToggle={toggleProducts}
             onClose={() => setOpenMenu(null)}
-          />
-          <NavDropdown
-            label={PUBLIC_NAV.platform.label}
-            items={PUBLIC_NAV.platform.items}
-            isOpen={openMenu === 'platform'}
-            onToggle={() => toggle('platform')}
-            onClose={() => setOpenMenu(null)}
-            isActive={platformActive}
           />
           {HEADER_MAIN_LINKS.map((item) => (
             <Link
@@ -94,7 +83,6 @@ export default function SiteHeader() {
             className="lg:hidden absolute top-[72px] left-4 right-4 max-h-[80vh] overflow-y-auto rounded-xl border border-border-strong bg-bg-secondary p-4 shadow-xl"
           >
             <MobileSection title={PUBLIC_NAV.products.label} items={PUBLIC_NAV.products.items} onClose={() => setMobileOpen(false)} />
-            <MobileSection title={PUBLIC_NAV.platform.label} items={PUBLIC_NAV.platform.items} onClose={() => setMobileOpen(false)} />
             {HEADER_MAIN_LINKS.map((l) => (
               <Link key={l.to} to={l.to} className="block py-2 text-sm font-medium" onClick={() => setMobileOpen(false)}>
                 {l.label}
@@ -118,7 +106,7 @@ function MobileSection({
   onClose,
 }: {
   title: string
-  items: typeof PUBLIC_NAV.platform.items
+  items: typeof PUBLIC_NAV.products.items
   onClose: () => void
 }) {
   return (
