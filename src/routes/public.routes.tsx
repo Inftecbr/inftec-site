@@ -7,7 +7,8 @@ import SegurancaPage from '../pages/SegurancaPage'
 import EmpresaPage from '../pages/EmpresaPage'
 import ContatoPage from '../pages/ContatoPage'
 import PrivacidadePage from '../pages/PrivacidadePage'
-import PrivacidadeExclusaoPage from '../pages/PrivacidadeExclusaoPage'
+import RemocaoDadosPage from '../pages/RemocaoDadosPage'
+import PrivacidadeExclusaoRedirect from '../pages/PrivacidadeExclusaoPage'
 import PrivacidadeResumoPage from '../pages/PrivacidadeResumoPage'
 import TermosPage from '../pages/TermosPage'
 import CookiesPage from '../pages/CookiesPage'
@@ -28,9 +29,10 @@ export function publicRoutes() {
       <Route path="/empresa" element={<EmpresaPage />} />
       <Route path="/contato" element={<ContatoPage />} />
       <Route path="/privacidade" element={<PrivacidadePage />} />
-      <Route path="/privacidade/exclusao-de-dados" element={<PrivacidadeExclusaoPage />} />
+      <Route path="/privacidade/exclusao-de-dados" element={<PrivacidadeExclusaoRedirect />} />
       <Route path="/privacidade/resumo" element={<PrivacidadeResumoPage />} />
       <Route path="/termos" element={<TermosPage />} />
+      <Route path="/remocao-de-dados" element={<RemocaoDadosPage />} />
       <Route path="/cookies" element={<CookiesPage />} />
       <Route
         path="/plataforma"

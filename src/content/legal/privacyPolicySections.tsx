@@ -284,8 +284,8 @@ export function PrivacyPolicyBody() {
       <Section id="exclusao" title="14. Exclusão de dados">
         <p>
           Titulares e administradores autorizados podem solicitar exclusão conforme{' '}
-          <Link to="/privacidade/exclusao-de-dados" className="text-data">
-            instruções de exclusão de dados
+          <Link to="/remocao-de-dados" className="text-data">
+            instruções de remoção de dados
           </Link>
           . Eliminamos ou anonimizamos quando não houver obrigação legal de retenção, base contratual vigente ou
           necessidade operacional legítima (ex.: logs de segurança por prazo curto).

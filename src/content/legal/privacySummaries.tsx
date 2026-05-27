@@ -27,8 +27,8 @@ export function PrivacyLandingSummary() {
           Política completa
         </Link>
         {' · '}
-        <Link to="/privacidade/exclusao-de-dados" className="text-data hover:text-data-dim">
-          Exclusão de dados
+        <Link to="/remocao-de-dados" className="text-data hover:text-data-dim">
+          Remoção de dados
         </Link>
         {' · '}
         <a href={`mailto:${COMPANY.privacyEmail}`} className="text-data hover:text-data-dim">

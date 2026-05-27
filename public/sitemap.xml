@@ -8,7 +8,7 @@
   <url><loc>https://inftec.com.br/empresa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://inftec.com.br/contato</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://inftec.com.br/privacidade</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://inftec.com.br/privacidade/exclusao-de-dados</loc><changefreq>yearly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://inftec.com.br/remocao-de-dados</loc><changefreq>yearly</changefreq><priority>0.55</priority></url>
   <url><loc>https://inftec.com.br/privacidade/resumo</loc><changefreq>yearly</changefreq><priority>0.55</priority></url>
   <url><loc>https://inftec.com.br/termos</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://inftec.com.br/cookies</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
