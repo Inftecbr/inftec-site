@@ -1,7 +1,101 @@
 import Container, { Section, SectionHeader } from '../../components/ui/Container'
 import Button from '../../components/ui/Button'
-import PlatformPreview from '../../components/platform/PlatformPreview'
 import { COMPANY, PRODUCT, PORTAL_LABELS } from '../../lib/constants'
+
+const trustBullets = [
+  'Arquitetura multi-tenant e isolamento por tenant',
+  'APIs governadas e integrações corporativas',
+  'Segurança, LGPD e gestão de acesso',
+  'Observabilidade e operação SaaS contínua',
+]
+
+export function TrustConfidenceSection() {
+  return (
+    <Section id="confianca">
+      <Container>
+        <SectionHeader
+          eyebrow="Confiança"
+          title="Engenharia e governança para operação crítica."
+          lead="A INFTEC opera produtos SaaS com arquitetura enterprise — transparência de superfícies, conformidade e maturidade operacional."
+          align="center"
+        />
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto mt-8">
+          {trustBullets.map((t) => (
+            <li
+              key={t}
+              className="rounded-xl border border-border bg-bg-secondary/60 px-4 py-4 text-sm text-text-secondary text-center leading-snug"
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </Section>
+  )
+}
+
+export function HomeProductsSection() {
+  return (
+    <Section id="produtos" alt>
+      <Container>
+        <SectionHeader
+          eyebrow="Produtos"
+          title="Plataformas operadas pela INFTEC"
+          lead="Visão resumida no site institucional. Funcionalidades, demonstrações e operação detalhada ficam nos domínios de cada produto."
+        />
+        <article className="max-w-xl rounded-2xl border border-border bg-bg-secondary p-8">
+          <h3 className="text-lg font-semibold text-text-primary">{PRODUCT.name}</h3>
+          <p className="mt-3 text-sm text-text-secondary leading-relaxed">
+            {PRODUCT.tagline} IA assistiva e atendimento conversacional — sem substituir o site comercial do produto.
+          </p>
+          <ul className="mt-4 space-y-1.5 text-sm text-text-secondary">
+            <li>· Inteligência operacional comercial</li>
+            <li>· IA assistiva com governança</li>
+            <li>· Atendimento conversacional</li>
+          </ul>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button variant="primary" href={PRODUCT.siteUrl} external>
+              Acessar site do produto ↗
+            </Button>
+            <Button variant="ghost" href="/produtos">
+              Catálogo INFTEC
+            </Button>
+          </div>
+        </article>
+      </Container>
+    </Section>
+  )
+}
+
+export function HomeEcosystemSection() {
+  return (
+    <Section id="ecossistema">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <SectionHeader
+            eyebrow="Ecossistema"
+            title="Superfícies independentes, uma empresa operadora."
+            lead="Cada domínio resolve um tipo de necessidade. A INFTEC é a empresa; Salefast é o produto; portais e docs têm responsabilidades distintas."
+          />
+          <ul className="space-y-2 text-sm font-mono text-data">
+            <li>inftec.com.br — institucional</li>
+            <li>www.salefast.com.br — produto</li>
+            <li>app.salefast.com.br — aplicação</li>
+            <li>docs.inftec.com.br — developers</li>
+            <li>status.inftec.com.br — status</li>
+          </ul>
+        </div>
+        <div className="mt-8">
+          <Button variant="secondary" href="/ecossistema">
+            Mapa do ecossistema
+          </Button>
+        </div>
+      </Container>
+    </Section>
+  )
+}
+
+import PlatformPreview from '../../components/platform/PlatformPreview'
 
 const pains = [
   'Leads chegam em vários canais; ninguém sabe quem está pronto para fechar.',
@@ -274,11 +368,11 @@ export function SecurityTeaserSection() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <SectionHeader
               eyebrow="Segurança e governança"
-              title="Plataforma construída para operação crítica e conformidade."
-              lead="LGPD, controle de acesso, rastreabilidade e arquitetura event-driven com observabilidade — a engenharia da INFTEC por trás do Salefast."
+              title="Confiança, conformidade e operação auditável."
+              lead="LGPD, segurança de APIs, observabilidade, gestão de acesso e compliance — camada institucional de confiança da INFTEC."
             />
             <ul className="grid sm:grid-cols-2 gap-3 text-sm text-text-secondary">
-              {['LGPD e privacidade by design', 'Controle de acesso e perfis', 'Auditoria e rastreabilidade', 'Infraestrutura SaaS dedicada', 'Processos de resposta a incidentes', 'Transparência para enterprise'].map(
+              {['LGPD e privacidade by design', 'Segurança e gestão de acesso', 'APIs e integrações corporativas', 'Observabilidade operacional', 'Compliance e transparência', 'Resposta a incidentes'].map(
                 (t) => (
                   <li key={t} className="flex gap-2 items-start">
                     <span className="text-data font-mono text-xs mt-0.5">✓</span>
@@ -290,7 +384,7 @@ export function SecurityTeaserSection() {
           </div>
           <div className="mt-8">
             <Button variant="secondary" href="/seguranca">
-              Central de segurança
+              Acessar central de segurança
             </Button>
           </div>
         </div>
@@ -305,18 +399,18 @@ export function FinalCTASection() {
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-balance">
-            Fale com a INFTEC ou avance para o universo Salefast.
+            Contato institucional ou site do produto Salefast.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Assuntos institucionais, parcerias e governança: contato INFTEC. Produto, demonstração comercial e operação
-            de clientes: {PORTAL_LABELS.salefastSite} e {PORTAL_LABELS.salefastApp}.
+            Parcerias, governança e assuntos corporativos: contato INFTEC. Produto, demonstração e operação de clientes:{' '}
+            {PORTAL_LABELS.salefastSite} ({PRODUCT.siteUrl.replace('https://', '')}).
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Button variant="primary" href="/contato">
-              Contato INFTEC
+              Contato institucional
             </Button>
             <Button variant="secondary" href={PRODUCT.siteUrl} external>
-              {PORTAL_LABELS.salefastSite}
+              Acessar Salefast ↗
             </Button>
           </div>
         </div>

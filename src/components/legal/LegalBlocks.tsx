@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { DOMAINS } from '../../config/domains'
 
 export function LegalSection({
   id,
@@ -52,8 +53,8 @@ export function LegalEntityCard() {
           https://inftec.com.br
         </a>
         {' · '}
-        <a href="https://salefast.com.br" className="text-data hover:underline">
-          https://salefast.com.br
+        <a href={DOMAINS.SALEFAST_SITE_URL} className="text-data hover:underline">
+          {DOMAINS.SALEFAST_SITE_URL}
         </a>
       </p>
     </aside>

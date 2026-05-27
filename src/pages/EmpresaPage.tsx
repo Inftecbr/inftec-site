@@ -30,7 +30,7 @@ export default function EmpresaPage() {
             <div>
               <h2 className="text-lg font-semibold text-text-primary mb-3">Salefast é o produto flagship</h2>
               <p>
-                {PRODUCT.name} é a primeira plataforma comercial da INFTEC: {PRODUCT.tagline.toLowerCase()} Possui{' '}
+                {PRODUCT.name} é um produto desenvolvido e operado por {COMPANY.legalName}. Possui{' '}
                 {PORTAL_LABELS.salefastSite} e {PORTAL_LABELS.salefastApp} — domínios, identidade e logins próprios.
               </p>
             </div>

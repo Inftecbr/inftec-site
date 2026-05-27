@@ -4,8 +4,8 @@ import { DOMAINS } from '../../config/domains'
 
 const legalLinks = [
   { to: '/privacidade', label: 'Privacidade' },
-  { to: '/remocao-de-dados', label: 'Remoção de dados' },
   { to: '/termos', label: 'Termos de uso' },
+  { to: '/remocao-de-dados', label: 'Remoção de dados' },
   { to: '/cookies', label: 'Cookies' },
 ]
 
@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">INFTEC</p>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li><Link to="/empresa" className="hover:text-text-primary">Empresa</Link></li>
-              <li><Link to="/plataforma" className="hover:text-text-primary">Plataforma</Link></li>
+              <li><Link to="/ecossistema" className="hover:text-text-primary">Ecossistema</Link></li>
               <li><Link to="/seguranca" className="hover:text-text-primary">Segurança</Link></li>
               <li><Link to="/contato" className="hover:text-text-primary">Contato</Link></li>
             </ul>
@@ -33,31 +33,30 @@ export default function Footer() {
           <div>
             <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">Produtos</p>
             <ul className="space-y-2 text-sm text-text-secondary">
-              <li><Link to="/produto" className="hover:text-text-primary">Salefast (visão INFTEC)</Link></li>
               <li>
                 <a href={PRODUCT.siteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
-                  {PORTAL_LABELS.salefastSite} ↗
+                  {PRODUCT.name} ↗
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">Portais</p>
-            <ul className="space-y-2 text-sm text-text-secondary">
-              <li>
-                <Link to={DOMAINS.INFTEC_PORTAL_PATH} className="hover:text-text-primary">
-                  {PORTAL_LABELS.inftecPortal}
-                </Link>
               </li>
               <li>
                 <a href={PRODUCT.appUrl} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
                   {PORTAL_LABELS.salefastApp} ↗
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">Developers</p>
+            <ul className="space-y-2 text-sm text-text-secondary">
               <li>
                 <a href={DOMAINS.DOCS_PLATFORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
                   {PORTAL_LABELS.apiPlatform} ↗
+                </a>
+              </li>
+              <li>
+                <a href={DOMAINS.STATUS_PLATFORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
+                  Platform Status ↗
                 </a>
               </li>
             </ul>
@@ -73,9 +72,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-xs text-text-muted flex flex-col sm:flex-row sm:justify-between gap-2">
-          <p>© {new Date().getFullYear()} {COMPANY.name}</p>
-          <p className="font-mono">Hub · {DOMAINS.INFTEC_SITE_URL.replace('https://', '')} · {DOMAINS.INFTEC_PORTAL_PATH}</p>
+        <div className="mt-12 pt-8 border-t border-border space-y-3 text-xs text-text-muted">
+          <p>
+            Salefast é uma plataforma desenvolvida e operada por {COMPANY.legalName}.
+          </p>
+          <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
+            <p>© {new Date().getFullYear()} {COMPANY.name}</p>
+            <p className="font-mono">{DOMAINS.INFTEC_SITE_URL.replace('https://', '')}</p>
+          </div>
         </div>
       </div>
     </footer>
