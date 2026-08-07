@@ -2,21 +2,85 @@ import Container, { Section, SectionHeader } from '../../components/ui/Container
 import Button from '../../components/ui/Button'
 import { COMPANY, PRODUCT, PORTAL_LABELS } from '../../lib/constants'
 
-const trustBullets = [
-  'Arquitetura multi-tenant e isolamento por tenant',
-  'APIs governadas e integrações corporativas',
-  'Segurança, LGPD e gestão de acesso',
-  'Observabilidade e operação SaaS contínua',
+const valueLoop = [
+  'Identificação de problemas relevantes do mercado corporativo',
+  'Criação de produtos SaaS próprios no ecossistema INFTEC',
+  'Operação contínua das plataformas para clientes',
+  'Aprendizado com uso real e feedback dos clientes',
+  'Evolução do produto via roadmap — benefícios compartilhados no ecossistema',
 ]
 
+export function HomePurposeSection() {
+  const items = [
+    {
+      title: 'Quem é a INFTEC',
+      body: `${COMPANY.brand} é a empresa por trás do portfólio: marca corporativa, governança, confiança e visão de longo prazo — distinta de cada produto SaaS.`,
+    },
+    {
+      title: 'Como criamos valor',
+      body: 'Modelo product-led: produtos SaaS repetíveis, operados em escala, evoluídos continuamente. Não vendemos horas, escopo ou software sob encomenda.',
+    },
+    {
+      title: 'Visão de longo prazo',
+      body: 'Expandir o portfólio de produtos SaaS sob a mesma INFTEC — hoje com Salefast como primeiro produto; amanhã com novas linhas quando a tese de produto for sólida.',
+    },
+  ]
+
+  return (
+    <Section id="proposito" alt>
+      <Container>
+        <SectionHeader
+          eyebrow="Empresa"
+          title="SaaS orientado a produtos — não a projetos."
+          lead={COMPANY.positioning}
+          align="center"
+        />
+        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-8">
+          {items.map((item) => (
+            <article key={item.title} className="rounded-xl border border-border bg-bg-secondary/60 p-5 text-center">
+              <h3 className="text-sm font-semibold text-text-primary">{item.title}</h3>
+              <p className="mt-2 text-sm text-text-secondary leading-relaxed">{item.body}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-10 max-w-2xl mx-auto">
+          <p className="text-xs font-medium uppercase tracking-wide text-text-muted text-center mb-4">
+            Ciclo de valor SaaS
+          </p>
+          <ol className="space-y-2 text-sm text-text-secondary">
+            {valueLoop.map((step, i) => (
+              <li key={step} className="flex gap-3 rounded-lg border border-border bg-bg-secondary/40 px-4 py-3">
+                <span className="font-mono text-xs text-data shrink-0 pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="mt-8 text-center">
+          <Button variant="ghost" href="/empresa">
+            Filosofia da empresa
+          </Button>
+        </div>
+      </Container>
+    </Section>
+  )
+}
+
 export function TrustConfidenceSection() {
+  const trustBullets = [
+    'Experiência do cliente no centro de cada produto SaaS',
+    'Portfólio próprio operado pela INFTEC',
+    'Ecossistema com papéis claros: empresa, produtos e aplicações',
+    'Privacidade, segurança e confiança institucional',
+  ]
+
   return (
     <Section id="confianca">
       <Container>
         <SectionHeader
           eyebrow="Confiança"
-          title="Engenharia e governança para operação crítica."
-          lead="A INFTEC opera produtos SaaS com arquitetura enterprise — transparência de superfícies, conformidade e maturidade operacional."
+          title="Empresa preparada para operar SaaS em escala."
+          lead="Clientes, parceiros e reguladores encontram aqui a camada institucional — enquanto cada produto mantém sua própria jornada comercial."
           align="center"
         />
         <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto mt-8">
@@ -39,26 +103,20 @@ export function HomeProductsSection() {
     <Section id="produtos" alt>
       <Container>
         <SectionHeader
-          eyebrow="Produtos"
-          title="Plataformas operadas pela INFTEC"
-          lead="Visão resumida no site institucional. Funcionalidades, demonstrações e operação detalhada ficam nos domínios de cada produto."
+          eyebrow="Produtos SaaS"
+          title="Ecossistema de produtos da INFTEC"
+          lead="Cada produto possui site e operação próprios. Aqui listamos apenas a pertinência institucional — sem funcionalidades, pricing ou demonstrações."
         />
         <article className="max-w-xl rounded-2xl border border-border bg-bg-secondary p-8">
+          <p className="text-xs font-medium uppercase tracking-wide text-text-muted mb-2">No portfólio hoje</p>
           <h3 className="text-lg font-semibold text-text-primary">{PRODUCT.name}</h3>
-          <p className="mt-3 text-sm text-text-secondary leading-relaxed">
-            {PRODUCT.tagline} IA assistiva e atendimento conversacional — sem substituir o site comercial do produto.
-          </p>
-          <ul className="mt-4 space-y-1.5 text-sm text-text-secondary">
-            <li>· Inteligência operacional comercial</li>
-            <li>· IA assistiva com governança</li>
-            <li>· Atendimento conversacional</li>
-          </ul>
+          <p className="mt-3 text-sm text-text-secondary leading-relaxed">{PRODUCT.institutionalSummary}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button variant="primary" href={PRODUCT.siteUrl} external>
-              Acessar site do produto ↗
+              Site do produto ↗
             </Button>
             <Button variant="ghost" href="/produtos">
-              Catálogo INFTEC
+              Ver todos os produtos
             </Button>
           </div>
         </article>
@@ -74,15 +132,14 @@ export function HomeEcosystemSection() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <SectionHeader
             eyebrow="Ecossistema"
-            title="Superfícies independentes, uma empresa operadora."
-            lead="Cada domínio resolve um tipo de necessidade. A INFTEC é a empresa; Salefast é o produto; portais e docs têm responsabilidades distintas."
+            title="Uma empresa SaaS, várias superfícies."
+            lead="INFTEC → produtos SaaS → aplicações → documentação e status → clientes. Cada camada com responsabilidade definida."
           />
           <ul className="space-y-2 text-sm font-mono text-data">
-            <li>inftec.com.br — institucional</li>
-            <li>www.salefast.com.br — produto</li>
-            <li>app.salefast.com.br — aplicação</li>
-            <li>docs.inftec.com.br — developers</li>
-            <li>status.inftec.com.br — status</li>
+            <li>INFTEC (inftec.com.br) — empresa e confiança</li>
+            <li>Produtos SaaS — sites dedicados (ex.: salefast.com.br)</li>
+            <li>Aplicações — operação autenticada dos clientes</li>
+            <li>Clientes — valor entregue via produtos do portfólio</li>
           </ul>
         </div>
         <div className="mt-8">
@@ -367,12 +424,12 @@ export function SecurityTeaserSection() {
         <div className="rounded-2xl border border-border-strong bg-bg-secondary p-8 md:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <SectionHeader
-              eyebrow="Segurança e governança"
-              title="Confiança, conformidade e operação auditável."
-              lead="LGPD, segurança de APIs, observabilidade, gestão de acesso e compliance — camada institucional de confiança da INFTEC."
+              eyebrow="Segurança e confiança"
+              title="Privacidade e governança para quem confia na INFTEC."
+              lead="LGPD, segurança da informação e transparência institucional — base para operar produtos SaaS com responsabilidade."
             />
             <ul className="grid sm:grid-cols-2 gap-3 text-sm text-text-secondary">
-              {['LGPD e privacidade by design', 'Segurança e gestão de acesso', 'APIs e integrações corporativas', 'Observabilidade operacional', 'Compliance e transparência', 'Resposta a incidentes'].map(
+              {['LGPD e privacidade', 'Segurança e gestão de acesso', 'Transparência com clientes', 'Resposta a incidentes', 'Governança do ecossistema', 'Políticas publicadas no site institucional'].map(
                 (t) => (
                   <li key={t} className="flex gap-2 items-start">
                     <span className="text-data font-mono text-xs mt-0.5">✓</span>
@@ -399,18 +456,18 @@ export function FinalCTASection() {
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-balance">
-            Contato institucional ou site do produto Salefast.
+            Fale com a INFTEC.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Parcerias, governança e assuntos corporativos: contato INFTEC. Produto, demonstração e operação de clientes:{' '}
-            {PORTAL_LABELS.salefastSite} ({PRODUCT.siteUrl.replace('https://', '')}).
+            Parcerias, governança, privacidade, segurança e assuntos corporativos. Cada produto do portfólio mantém
+            canais comerciais e operacionais em domínio próprio.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Button variant="primary" href="/contato">
               Contato institucional
             </Button>
-            <Button variant="secondary" href={PRODUCT.siteUrl} external>
-              Acessar Salefast ↗
+            <Button variant="secondary" href="/ecossistema">
+              Mapa do ecossistema
             </Button>
           </div>
         </div>

@@ -25,16 +25,19 @@ export const COMPANY = {
   portalUrl: INFTEC_PORTAL_URL,
   portalPath: DOMAINS.INFTEC_PORTAL_PATH,
   ogImage: 'https://inftec.com.br/og-image.png',
-  slogan: 'Inteligência operacional, aplicada.',
+  slogan: 'Produtos SaaS próprios, evolução contínua.',
   positioning:
-    'Empresa de tecnologia que constrói e opera plataformas operacionais — software onde sinais viram prioridade acionável.',
+    'Empresa SaaS que cria, opera e evolui produtos próprios para o mercado corporativo — com portfólio em expansão sob a marca INFTEC.',
   shortDescription:
-    'Site institucional da INFTEC: empresa de tecnologia, ecossistema SaaS e governança do ecossistema.',
+    'Empresa SaaS: produtos próprios, ecossistema integrado e evolução contínua orientada a clientes.',
 } as const
 
 export const PRODUCT = {
   name: 'Salefast',
   tagline: 'Plataforma de inteligência operacional comercial.',
+  /** Texto institucional no site INFTEC — sem funcionalidades comerciais. */
+  institutionalSummary:
+    'Primeiro produto SaaS do ecossistema INFTEC. Site e aplicação próprios; jornada comercial no domínio do produto.',
   siteUrl: DOMAINS.SALEFAST_SITE_URL,
   appUrl: DOMAINS.SALEFAST_APP_URL,
 } as const
