@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Button from '../../components/ui/Button'
-import { COMPANY, PRODUCT } from '../../lib/constants'
+import { COMPANY } from '../../lib/constants'
 
 const pillars = [
   {
-    title: 'Plataformas SaaS',
-    body: 'Produtos proprietários com arquitetura multi-tenant e operação contínua.',
+    title: 'Produtos SaaS próprios',
+    body: 'Cada produto do portfólio é criado, operado e evoluído pela INFTEC — com site e aplicação dedicados.',
   },
   {
-    title: 'Governança e segurança',
-    body: 'Controle de acesso, conformidade e engenharia orientada a confiança.',
+    title: 'Evolução contínua',
+    body: 'Roadmap orientado a problemas reais de mercado e aprendizado com clientes — não projetos sob encomenda.',
   },
   {
-    title: 'Ecossistema organizado',
-    body: 'Superfícies independentes — institucional, produto, portal e developers.',
+    title: 'Ecossistema integrado',
+    body: 'Empresa, produtos, aplicações e confiança institucional organizados em superfícies claras.',
   },
 ]
 
@@ -36,21 +36,22 @@ export default function HomeHero() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-xs font-medium tracking-wide text-text-secondary uppercase mb-4">
-              {COMPANY.brand} · Software vendor
+              {COMPANY.brand} · Empresa SaaS
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-tight tracking-tight text-balance">
-              Tecnologia enterprise para plataformas SaaS e ecossistemas digitais.
+              Criamos e operamos produtos SaaS próprios para empresas.
             </h1>
             <p className="mt-5 text-base sm:text-lg text-text-secondary leading-relaxed max-w-xl">
-              A {COMPANY.brand} constrói e opera plataformas com foco em governança, segurança e maturidade
-              operacional. O Salefast é nosso produto flagship — site e aplicação em domínios próprios.
+              A {COMPANY.brand} identifica problemas relevantes, transforma-os em produtos SaaS, opera essas
+              plataformas no dia a dia e evolui o portfólio com base no mercado e nos clientes — este site
+              representa a empresa, não um produto isolado.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <Button variant="primary" href="/empresa">
                 Conhecer a INFTEC
               </Button>
-              <Button variant="secondary" href={PRODUCT.siteUrl} external>
-                Conhecer Salefast ↗
+              <Button variant="secondary" href="/produtos">
+                Produtos SaaS
               </Button>
             </div>
           </motion.div>

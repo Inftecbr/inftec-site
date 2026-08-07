@@ -1,6 +1,7 @@
 import PageMeta from '../components/PageMeta'
 import HomeHero from '../sections/home/HomeHero'
 import {
+  HomePurposeSection,
   TrustConfidenceSection,
   HomeProductsSection,
   HomeEcosystemSection,
@@ -12,11 +13,12 @@ export default function HomePage() {
   return (
     <>
       <PageMeta
-        title="INFTEC — Empresa de tecnologia | Plataformas SaaS e ecossistema"
-        description="Site institucional da INFTEC. Software vendor enterprise: governança, segurança e ecossistema. Salefast é produto em www.salefast.com.br."
+        title="INFTEC — Empresa SaaS | Produtos próprios e ecossistema"
+        description="INFTEC: empresa SaaS que cria, opera e evolui produtos próprios. Quem somos, como criamos valor e ecossistema de produtos — Salefast e futuras linhas."
         path="/"
       />
       <HomeHero />
+      <HomePurposeSection />
       <TrustConfidenceSection />
       <HomeProductsSection />
       <HomeEcosystemSection />

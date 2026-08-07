@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-bg-primary py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <p className="text-sm font-semibold text-text-primary">{COMPANY.legalName}</p>
             <p className="mt-2 text-sm text-text-secondary leading-relaxed">{COMPANY.shortDescription}</p>
@@ -24,6 +24,7 @@ export default function Footer() {
             <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">INFTEC</p>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li><Link to="/empresa" className="hover:text-text-primary">Empresa</Link></li>
+              <li><Link to="/produtos" className="hover:text-text-primary">Produtos</Link></li>
               <li><Link to="/ecossistema" className="hover:text-text-primary">Ecossistema</Link></li>
               <li><Link to="/seguranca" className="hover:text-text-primary">Segurança</Link></li>
               <li><Link to="/contato" className="hover:text-text-primary">Contato</Link></li>
@@ -34,29 +35,13 @@ export default function Footer() {
             <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">Produtos</p>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
+                <Link to="/produtos" className="hover:text-text-primary">
+                  Portfólio INFTEC
+                </Link>
+              </li>
+              <li>
                 <a href={PRODUCT.siteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
                   {PRODUCT.name} ↗
-                </a>
-              </li>
-              <li>
-                <a href={PRODUCT.appUrl} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
-                  {PORTAL_LABELS.salefastApp} ↗
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-4">Developers</p>
-            <ul className="space-y-2 text-sm text-text-secondary">
-              <li>
-                <a href={DOMAINS.DOCS_PLATFORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
-                  {PORTAL_LABELS.apiPlatform} ↗
-                </a>
-              </li>
-              <li>
-                <a href={DOMAINS.STATUS_PLATFORM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary">
-                  Platform Status ↗
                 </a>
               </li>
             </ul>
@@ -74,7 +59,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border space-y-3 text-xs text-text-muted">
           <p>
-            Salefast é uma plataforma desenvolvida e operada por {COMPANY.legalName}.
+            {PRODUCT.name} é um produto desenvolvido e operado por {COMPANY.legalName}.
           </p>
           <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
             <p>© {new Date().getFullYear()} {COMPANY.name}</p>

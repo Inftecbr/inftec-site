@@ -14,9 +14,17 @@ export const PUBLIC_NAV = {
     label: 'Produtos',
     items: [
       {
+        id: 'portfolio',
+        label: 'Portfólio INFTEC',
+        description: 'Produtos SaaS da INFTEC — visão institucional do portfólio.',
+        href: '/produtos',
+        external: false,
+        icon: 'product' as const,
+      },
+      {
         id: 'salefast',
         label: 'Salefast',
-        description: 'Plataforma de inteligência operacional comercial.',
+        description: 'Site do produto — funcionalidades e jornada comercial.',
         href: DOMAINS.SALEFAST_SITE_URL,
         external: true,
         icon: 'product' as const,
